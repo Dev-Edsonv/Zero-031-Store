@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #000;
+    z-index: -1;
+}
+
+main {
+    height: 20vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #000;
+    border-bottom: 2px solid rgb(169, 169, 169);
+}
+
+main section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.circle {
+    position: absolute;
+    clip-path: circle(18rem at left);
+    background-color: blueviolet;
+    z-index: -1;
+    width: 288px;
+    height: 19.8vh;
+    top: 0;
+}
+
+#logo {
+    width: 300px;
+}
+
+.links {
+    background-color: rgb(79, 79, 79);
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 20px;
+    border-radius: 54px;
+}
+
+.links a {
+    margin-right: 26px;
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.links a:hover {
+    cursor: pointer;
+    text-decoration: 5px underline blueviolet;
+    transition: 0.5s linear;
+    cursor: pointer;
+}
+
+.links a:active {
+    opacity: 0.3;
+    cursor: grab;
+}
+
+.div-shopping-bag {
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.shoppingBag {
+    background: rgb(79, 79, 79, 0.9);
+    width: 65px;
+    height: 65px;
+    padding: 11px;
+    border-radius: 21px;
+}
+
+.shoppingBag:hover {
+    background: blueviolet;
+    cursor: pointer;
+}
+
+.shoppingBag:active {
+    opacity: .5;
+    cursor: grab;
+}
