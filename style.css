@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #000;
+    background-color: rgb(28, 28, 28);
     z-index: -1;
 }
 
@@ -17,23 +17,13 @@ main {
     top: 0;
     background-color: #000;
     border-bottom: 2px solid rgb(169, 169, 169);
+    z-index: 99;
 }
 
 main section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-
-.circle {
-    position: absolute;
-    clip-path: circle(18rem at left);
-    background-color: blueviolet;
-    z-index: -1;
-    width: 288px;
-    height: 19.8vh;
-    top: 0;
 }
 
 #logo {
@@ -59,7 +49,7 @@ main section {
 
 .links a:hover {
     cursor: pointer;
-    text-decoration: 5px underline blueviolet;
+    text-decoration: 5px underline #000;
     transition: 0.5s linear;
     cursor: pointer;
 }
@@ -67,6 +57,19 @@ main section {
 .links a:active {
     opacity: 0.3;
     cursor: grab;
+}
+
+.links select {
+    margin-right: 26px;
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    background-color: rgb(79, 79, 79);
+    border: none;
+    font-size: 17px;
+    padding: 10px;
 }
 
 .div-shopping-bag {
@@ -83,11 +86,63 @@ main section {
 }
 
 .shoppingBag:hover {
-    background: blueviolet;
+    background: #000;
     cursor: pointer;
 }
 
 .shoppingBag:active {
     opacity: .5;
     cursor: grab;
+}
+
+.products {
+    padding-top: 10%;
+}
+
+.products h1 {
+    color: rgb(211, 211, 211);
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.side {
+    display: flex;
+    margin-top: 40px;
+}
+
+.templateScroll {
+    background-color: red;
+    overflow-y: auto;
+    display: flex;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    width: 50vw;
+    grid-template-rows: 200px 200px 200px;
+    height: 100vh;
+    gap: 140px;
+}
+
+.images img {
+    width: 300px;
+}
+
+/* .set img {
+    position: absolute;
+    z-index: -1;
+} */
+
+.display {
+    width: 30vw;
+    height: 75vh;
+}
+
+.display img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
 }
