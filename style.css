@@ -5,6 +5,11 @@
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+    --color: rgb(211, 211, 211);
+    --secound-color: rgb(79, 79, 79)
+}
+
 body {
     background-color: rgb(28, 28, 28);
     z-index: -1;
@@ -31,7 +36,7 @@ main section {
 }
 
 .links {
-    background-color: rgb(79, 79, 79);
+    background-color: var(--secound-color);
     display: flex;
     align-items: center;
     height: 100px;
@@ -42,7 +47,7 @@ main section {
 .links a {
     margin-right: 26px;
     text-decoration: none;
-    color: rgb(211, 211, 211);
+    color: var(--color);
     font-weight: 600;
     cursor: pointer;
 }
@@ -62,11 +67,11 @@ main section {
 .links select {
     margin-right: 26px;
     text-decoration: none;
-    color: rgb(211, 211, 211);
+    color: var(--color);
     font-weight: 600;
     cursor: pointer;
     outline: none;
-    background-color: rgb(79, 79, 79);
+    background-color: var(--secound-color);
     border: none;
     font-size: 17px;
     padding: 10px;
@@ -78,7 +83,7 @@ main section {
 }
 
 .shoppingBag {
-    background: rgb(79, 79, 79, 0.9);
+    background: var(--secound-color);
     width: 65px;
     height: 65px;
     padding: 11px;
@@ -98,51 +103,68 @@ main section {
 .products {
     padding-top: 10%;
 }
-
-.products h1 {
-    color: rgb(211, 211, 211);
+.title {
+    color: var(--color);
     text-align: center;
-    font-size: 50px;
-    letter-spacing: 2px;
-}
-
-.side {
-    display: flex;
-    margin-top: 40px;
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin: 10px 0 10px 0;
 }
 
 .templateScroll {
-    background-color: red;
-    overflow-y: auto;
     display: flex;
+    justify-content: center;
 }
 
 .images {
+    width: 30vw;
+    background-color: rgb(69, 69, 69);
+    height: 80vh;
     display: grid;
-    grid-template-columns: 200px 200px 200px;
-    width: 50vw;
-    grid-template-rows: 200px 200px 200px;
-    height: 100vh;
-    gap: 140px;
+    grid-template-columns: 250px 250px;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 90px;
+    padding-top: 10px;
+    border-top-left-radius: 26px;
+    border-bottom-left-radius: 26px;
+}
+
+.images::-webkit-scrollbar {
+    width: 15px;
+    border-radius: 10px;
+}
+
+.images::-webkit-scrollbar-track {
+    background: var(--color);
+}
+
+.images::-webkit-scrollbar-thumb {
+   background-color: var(--color);
+   border-radius: 10px;
+   border: 2px solid var(--secound-color);
+   width: 5px;
 }
 
 .images img {
-    width: 300px;
+    width: 12rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 11px;
 }
 
-/* .set img {
-    position: absolute;
-    z-index: -1;
-} */
+.images img:hover {
+    cursor: pointer;
+}
 
 .display {
     width: 30vw;
-    height: 75vh;
+    margin-left: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .display img {
-    width: 70%;
-    display: block;
-    margin: 0 auto;
-    border-radius: 12px;
+    width: 350px;
 }
